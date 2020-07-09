@@ -1,8 +1,29 @@
+* {
+box-sizing: border-box;
+}
+
 body{
     margin: 0;
     background-color: rgb(230, 141, 109);
 }
 
 img{
-    max-width: 100%;
+    max-width: 80%;
 }
+
+.contenedorplaya {
+    background-color: rgb(252, 251, 246);
+    width: 80%;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.contenedorlaguna{
+    background-color: darkgreen;
+    width: 80%;
+    height: 200px;
+    position:relative;
+    border-radius: 30px;
+}
+
+
