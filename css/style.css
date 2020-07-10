@@ -1,29 +1,115 @@
-* {
-box-sizing: border-box;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body{
-    margin: 0;
-    background-color: rgb(230, 141, 109);
-}
-
-img{
-    max-width: 80%;
-}
-
-.contenedorplaya {
-    background-color: rgb(252, 251, 246);
-    width: 80%;
-    height: 200px;
-    border-radius: 10px;
-}
-
-.contenedorlaguna{
-    background-color: darkgreen;
-    width: 80%;
-    height: 200px;
-    position:relative;
-    border-radius: 30px;
+    background-image: url(../imagenes/fondo.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 330vh;
 }
 
 
+h2{
+    text-align: center;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 80px;
+    color: rgb(206, 20, 7);
+    text-shadow: 0px  0px  6px;
+}
+.content-all{
+    width: 210px;
+    margin: auto;
+    perspective: 2000px;
+    position: relative;
+    margin-top: 50px;
+}
+
+.content-carrusel{
+    width: 100%;
+    position: absolute;
+    animation: rotar 70s infinite linear;
+    transform-style: preserve-3d;
+    
+}
+
+.content-carrusel:hover{
+    animation-play-state:paused;
+    cursor: pointer;
+} 
+
+
+.content-carrusel figure{
+    width: 100%;
+    height: 120px;
+    overflow: hidden;
+    position: absolute;
+    box-shadow: 0px 0px 0px 0px black;
+   transition: all 300ms;
+}
+
+.content-carrusel figure:hover{
+    box-shadow: 0px 0px 20px 0px black;
+    transition: all 300ms;
+}
+
+.content-carrusel figure:nth-child(0){transform: rotateY(0deg) translateZ(300px);}
+.content-carrusel figure:nth-child(1){transform: rotateY(40deg) translateZ(300px);}
+.content-carrusel figure:nth-child(2){transform: rotateY(80deg) translateZ(300px);}
+.content-carrusel figure:nth-child(3){transform: rotateY(120deg) translateZ(300px);}
+.content-carrusel figure:nth-child(4){transform: rotateY(160deg)translateZ(300px);}
+.content-carrusel figure:nth-child(5){transform: rotateY(200deg) translateZ(300px);}
+.content-carrusel figure:nth-child(6){transform: rotateY(240deg) translateZ(300px);}
+.content-carrusel figure:nth-child(7){transform: rotateY(280deg) translateZ(300px);}
+.content-carrusel figure:nth-child(8){transform: rotateY(320deg) translateZ(300px);}
+.content-carrusel figure:nth-child(9){transform: rotateY(360deg) translateZ(300px);}
+
+
+.content-carrusel img{
+    width: 100%;
+    
+   
+}
+
+/*.content-carrusel img:hover{
+    transform:scale(1.2);
+    transition: all 300ms;
+}*/
+
+@keyframes rotar{
+    from{
+        transform: rotateY(0deg);
+    }to {
+        transform: rotateY(360deg);
+    }
+}
+
+ul{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    background: rgb(134, 37, 37);
+    overflow: hidden;
+}
+li{
+    float: left;
+}
+
+li a{
+    display: block;
+    color: seashell;
+    text-align: center;
+    padding: 16px 16px;
+    text-decoration: none;
+
+}
+
+li a:hover{
+    background-color: rgb(243, 241, 123);
+    color: rgb(14, 13, 14);
+
+}
